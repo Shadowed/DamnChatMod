@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: Damn Chat Mod
+## Notes: Adds some basic improvements for managing larger channels
+## Author: Shadow
+## SavedVariables: DamnChatModDB
+
+DamnChatMod.lua
