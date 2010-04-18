@@ -156,6 +156,7 @@ SlashCmdList["DAMNCHAT"] = function(msg)
 		queuedID, queueType = channelID, "list"
 		pullPlayers(channelID)
 
+--[[
 	elseif( cmd == "hdmod" and arg ) then
 		local channelID, players = getChannelIndex(arg)
 		if( not channelID ) then
@@ -166,7 +167,7 @@ SlashCmdList["DAMNCHAT"] = function(msg)
 		DamnChat:Print(string.format("Pulling players for %s from the server, removing hidden moderators in a miute.", arg))
 		queuedID, queueType = channelID, "hidden"
 		pullPlayers(channelID)
-		
+]]		
 	elseif( cmd == "unmod" and arg ) then
 		local  channelID, players = getChannelIndex(arg)
 		if( not channelID ) then
@@ -224,7 +225,7 @@ SlashCmdList["DAMNCHAT"] = function(msg)
 	else
 		DamnChat:Print("Slash commands")
 		DEFAULT_CHAT_FRAME:AddMessage("/damnchat mods <channel name> - Lists moderators in the given channel")
-		DEFAULT_CHAT_FRAME:AddMessage("/damnchat hdmod <channel name> - Removes hidden moderators from the channel, THIS WILL SPAM.")
+		--DEFAULT_CHAT_FRAME:AddMessage("/damnchat hdmod <channel name> - Removes hidden moderators from the channel, THIS WILL SPAM.")
 		DEFAULT_CHAT_FRAME:AddMessage("/damnchat unmod <channel name> - Removes all current moderators in a channel, unless they are yourself or on the whitelist")
 		DEFAULT_CHAT_FRAME:AddMessage("/damnchat white <channel name> <player name> - Adds the given player to a per-channel whitelist who will not be mass demoted")
 		DEFAULT_CHAT_FRAME:AddMessage("/damnchat rmwhite <channel name> <player name> - Removes a player from a channels whitelist")
